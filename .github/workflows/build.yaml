@@ -3,7 +3,34 @@ name: build
 on: [push, workflow_dispatch]
 jobs:
   build-java-source:
-    name: build app and image
+    name: build jar file
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java build environmant
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn package -DskipTests
+
+      - name: Upload jar file
+        uses: actions/upload-artifact@v3
+        with:
+          name: javademo.jar
+          path: target/javademo.jar
+
+  build-image:
+    name: build Docker image
+    needs: build-java-source
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -20,18 +47,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Java build environmant
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'temurin'
-          java-version: '11'
-          cache: 'maven'
-
-      - name: Build with Maven
-        run: mvn package -DskipTests
-
-      - name: Upload jar file
-        uses: actions/upload-artifact@v3
+      - name: Download jar file
+        uses: actions/download-artifact@v3
         with:
           name: javademo.jar
           path: target/javademo.jar
