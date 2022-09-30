@@ -1,6 +1,6 @@
 ---
 name: build
-on: [push, manual]
+on: [push, workflow_dispatch]
 jobs:
   build-java-source:
     runs-on: ubuntu-latest
