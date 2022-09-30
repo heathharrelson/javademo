@@ -13,3 +13,8 @@ jobs:
           cache: 'maven'
       - name: Build with Maven
         run: mvn package -DskipTests
+      - name: Upload jar file
+        uses: actions/upload-artifact@v3
+        with:
+          name: javademo.jar
+          path: target/javademo.jar
