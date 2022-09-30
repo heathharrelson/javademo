@@ -57,4 +57,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
+          context: .
           tags: gchr.io/${{ github.repository }}:latest
