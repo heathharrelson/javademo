@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# Explicitly allow build output
+!target/javademo.jar
