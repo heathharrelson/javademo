@@ -54,6 +54,7 @@ jobs:
           path: target/javademo.jar
 
       - name: Build Docker image
+        timeout-minutes: 10
         uses: docker/build-push-action@v3
         with:
           push: true
