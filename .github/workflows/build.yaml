@@ -32,9 +32,9 @@ jobs:
     name: build Docker image
     needs: build-java-source
     runs-on: ubuntu-latest
-    # permissions:
-    #   contents: read
-    #   packages: write
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Check out repository
