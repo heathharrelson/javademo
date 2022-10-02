@@ -62,3 +62,5 @@ jobs:
           tags: gchr.io/${{ github.repository }}:latest
           labels: |
             org.opencontainers.image.source=https://github.com/heathharrelson/javademo
+          cache-from: type=gha
+          cache-to: type=gha
