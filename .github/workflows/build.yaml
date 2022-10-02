@@ -65,6 +65,6 @@ jobs:
           platforms: linux/amd64
           push: true
           context: .
-          tags: gchr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
           labels: |
             org.opencontainers.image.source=https://github.com/heathharrelson/javademo
