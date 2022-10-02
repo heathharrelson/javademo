@@ -45,7 +45,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PUSH_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download jar file
         uses: actions/download-artifact@v3
