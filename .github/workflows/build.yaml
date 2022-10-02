@@ -36,21 +36,32 @@ jobs:
       contents: read
       packages: write
 
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        with:
-          buildkitd-flags: --debug
 
       - name: Log into container registry
         uses: docker/login-action@v2
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Image metadata
+        id: image_metadata
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Download jar file
         uses: actions/download-artifact@v3
@@ -58,13 +69,11 @@ jobs:
           name: javademo.jar
           path: target/javademo.jar
 
-      - name: Build Docker image
-        timeout-minutes: 10
+      - name: Build container image
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64
           push: true
           context: .
-          tags: ghcr.io/${{ github.repository }}:latest
-          labels: |
-            org.opencontainers.image.source=https://github.com/heathharrelson/javademo
+          tags: ${{ steps.image_metadata.outputs.tags }}
+          labels: ${{ steps.image_metadata.outputs.labels }}
