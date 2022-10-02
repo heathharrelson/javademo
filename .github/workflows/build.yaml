@@ -60,10 +60,11 @@ jobs:
         timeout-minutes: 10
         uses: docker/build-push-action@v3
         with:
+          platforms: linux/amd64
           push: true
           context: .
           tags: gchr.io/${{ github.repository }}:latest
           labels: |
             org.opencontainers.image.source=https://github.com/heathharrelson/javademo
-          # cache-from: type=gha
-          # cache-to: type=gha
+          cache-from: type=gha
+          cache-to: type=gha
