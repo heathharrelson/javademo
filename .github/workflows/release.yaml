@@ -31,10 +31,13 @@ jobs:
           java-version: '11'
           cache: 'maven'
 
-      - name: Run Maven release plugin
+      - name: Set up Git
         run: |
           git config --global user.email "harrelst@ohsu.edu"
           git config --global user.name "Heath Harrelson"
+
+      - name: Prepare Maven release
+        run: |
           mvn -B \
             -Darguments=-DskipTests \
             -DreleaseVersion=${{ inputs.version }} \
@@ -42,4 +45,3 @@ jobs:
             -Dusername=${{ github.actor }} \
             -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare
-          mvn release:perform
