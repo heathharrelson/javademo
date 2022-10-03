@@ -1,6 +1,14 @@
 ---
 name: build
-on: [push, workflow_dispatch]
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
 jobs:
   build:
     name: Build application binaries
