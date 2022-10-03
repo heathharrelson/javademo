@@ -45,3 +45,6 @@ jobs:
             -Dusername=${{ github.actor }} \
             -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare
+
+      - name: Build Docker image
+        uses: ./.github/workflows/build.yaml
