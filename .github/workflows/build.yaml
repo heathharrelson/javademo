@@ -1,5 +1,5 @@
 ---
-name: build
+name: Build
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
             type=semver,pattern={{version}}
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Set up Java build environmant
+      - name: Set up Java build environment
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
