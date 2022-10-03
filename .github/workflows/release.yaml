@@ -33,9 +33,13 @@ jobs:
 
       - name: Run Maven release plugin
         run: |
+          git config --global user.email "harrelst@ohsu.edu"
+          git config --global user.name "Heath Harrelson"
           mvn -B \
-            -DskipTests \
+            -Darguments=-DskipTests \
             -DreleaseVersion=${{ inputs.version }} \
             -DdevelopmentVersion=${{ inputs.development_version }}-SNAPSHOT \
+            -Dusername=${{ github.actor }} \
+            -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare
           mvn release:perform
