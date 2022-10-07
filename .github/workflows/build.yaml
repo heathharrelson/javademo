@@ -74,12 +74,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: javademo.jar
-          path: target/javademo.jar
+          path: target
 
       - name: Inspect downloaded jar
         run: |
           ls -lh target
-          ls -lh target/javademo.jar
 
       - name: Build Docker image
         uses: docker/build-push-action@v3
