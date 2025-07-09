@@ -30,7 +30,7 @@ jobs:
         run: mvn package -DskipTests
 
       - name: Upload jar file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: javademo.jar
           path: target/javademo.jar
