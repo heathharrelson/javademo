@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade to Spring Boot 3
 - Update Deprecated Action
 - Use bot for git name and email in release workflow
+- Automatically update CHANGELOG.md during release
 
 ## [0.2.1] - 2022-10-03
 
