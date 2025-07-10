@@ -59,8 +59,17 @@ jobs:
             -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare
 
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: ${{ steps.update_changelog.outputs.release-notes }}
+          draft: false
+          prerelease: false
+          name: ${{ inputs.version }}
+          tag_name: v${{ inputs.version }}
+
       - name: Run build workflow
         run: |
-          gh workflow run build.yaml
+          gh workflow run build.yaml --ref v${{ inputs.version }}
         env:
           GH_TOKEN: ${{ github.token }}
