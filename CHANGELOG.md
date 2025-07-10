@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Add missing GH_TOKEN variable to release workflow
+
 ## [0.3.1] - 2025-07-10
 
 ### Changed
