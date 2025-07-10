@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Grant `actions: write` permission to the release workflow
+
 ## [0.3.2] - 2025-07-10
 
 ### Fixed
