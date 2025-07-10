@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.6] - 2025-07-10
+
 ### Changed
 
 - Upgrade thomaseizinger/keep-a-changelog-new-release action to version 3.1.0
@@ -68,7 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.5...HEAD
+[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.6...HEAD
+[0.3.6]: https://github.com/heathharrelson/javademo/compare/0.3.5...0.3.6
 [0.3.5]: https://github.com/heathharrelson/javademo/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/heathharrelson/javademo/compare/0.3.2...0.3.4
 [0.3.2]: https://github.com/heathharrelson/javademo/compare/0.3.1...0.3.2
