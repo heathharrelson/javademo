@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade thomaseizinger/keep-a-changelog-new-release action to version 3.1.0
+
 ## [0.3.5] - 2025-07-10
 
 ### Changed
