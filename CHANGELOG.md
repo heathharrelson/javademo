@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change the release workflow to call the build workflow in a separate job
+
 ## [0.3.0] - 2025-07-10
 
 ### Changed
