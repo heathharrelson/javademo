@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Change the release workflow to call the build workflow in a separate job
+- Trigger build workflow from the release workflow using the CLI
 
 ## [0.3.0] - 2025-07-10
 

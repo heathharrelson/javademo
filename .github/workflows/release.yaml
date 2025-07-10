@@ -58,6 +58,6 @@ jobs:
             -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare
 
-  build-docker-image:
-    uses: ./.github/workflows/build.yaml
-    secrets: inherit
+      - name: Run build workflow
+        run: |
+          gh workflow run build.yaml
