@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>dev.heathharrelson</groupId>
 	<artifactId>javademo</artifactId>
-	<version>0.3.5</version>
+	<version>0.3.6-SNAPSHOT</version>
 	<name>javademo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -18,7 +18,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/heathharrelson/javademo.git</developerConnection>
-	  <tag>v0.3.5</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencies>
