@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.5] - 2025-07-10
+
 ### Changed
 
 - Automatically create GitHub release
@@ -62,7 +64,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.4...HEAD
+[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.5...HEAD
+[0.3.5]: https://github.com/heathharrelson/javademo/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/heathharrelson/javademo/compare/0.3.2...0.3.4
 [0.3.2]: https://github.com/heathharrelson/javademo/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/heathharrelson/javademo/compare/0.3.0...0.3.1
