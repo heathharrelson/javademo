@@ -26,6 +26,13 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
+      - name: Debug - log github.ref
+        run: echo ${{ github.ref }}
+
+      - name: Debug - github.ref expression
+        if: startsWith('refs/tags', github.ref)
+        run: echo "YUP"
+
       - name: Build with Maven
         run: mvn package -DskipTests
 
