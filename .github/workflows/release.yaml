@@ -53,7 +53,9 @@ jobs:
           mvn -B \
             -Darguments=-DskipTests \
             -DreleaseVersion=${{ inputs.version }} \
+            -DscmReleaseCommitComment="Release version ${{ inputs.version }}" \
             -DdevelopmentVersion=${{ inputs.development_version }}-SNAPSHOT \
+            -DscmDevelopmentCommitComment="Next development version - ${{ inputs.development_version }}" \
             -Dusername=${{ github.actor }} \
             -Dpassword=${{ secrets.GITHUB_TOKEN }} \
             release:prepare

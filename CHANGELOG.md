@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Use OCTRI conventions for release commit messages
+
 ## [0.3.6] - 2025-07-10
 
 ### Changed
