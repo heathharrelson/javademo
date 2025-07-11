@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.7] - 2025-07-11
+
 ### Changed
 
 - Use OCTRI conventions for release commit messages
@@ -74,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.6...HEAD
+[unreleased]: https://github.com/heathharrelson/javademo/compare/0.3.7...HEAD
+[0.3.7]: https://github.com/heathharrelson/javademo/compare/0.3.6...0.3.7
 [0.3.6]: https://github.com/heathharrelson/javademo/compare/0.3.5...0.3.6
 [0.3.5]: https://github.com/heathharrelson/javademo/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/heathharrelson/javademo/compare/0.3.2...0.3.4
